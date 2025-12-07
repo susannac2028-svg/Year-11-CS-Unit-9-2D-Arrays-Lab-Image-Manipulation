@@ -84,9 +84,9 @@ public class ImageManipulation {
                 int d = a.getBlue();
                 int avg = ((b + c + d) / 3);
                 if (avg >= 128) {
-                    a.setRed(225);
-                    a.setGreen(225);
-                    a.setBlue(225);
+                    a.setRed(255);
+                    a.setGreen(255);
+                    a.setBlue(255);
                 } else {
                     a.setRed(0);
                     a.setGreen(0);
