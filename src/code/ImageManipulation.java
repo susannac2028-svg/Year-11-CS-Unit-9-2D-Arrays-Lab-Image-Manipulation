@@ -75,10 +75,11 @@ public class ImageManipulation {
      */
     public static void blackAndWhite(String pathOfFile) {
         APImage image = new APImage(pathOfFile);
+        APImage newImage = image.clone();
 
         for (int i = 0; i < image.getWidth(); i++) {
             for (int j = 0; j < image.getHeight(); j++) {
-                Pixel a = image.getPixel(i, j);
+                Pixel a = newImage.getPixel(i, j);
                 int b = a.getRed();
                 int c = a.getGreen();
                 int d = a.getBlue();
@@ -94,7 +95,7 @@ public class ImageManipulation {
                 }
             }
         }
-        image.draw();
+        newImage.draw();
 
     }
 
